@@ -1,0 +1,60 @@
+-- membuat database
+CREATE database belajar_mysql;
+-- menampilkan list database yang ada
+SHOW databases;
+-- menghapus database
+DROP database belajar_mysql;
+-- menampilkan list database yang ada
+SHOW databases;
+-- membuat database
+CREATE database belajar_mysql;
+-- memilih database yang akan digunakan
+USE belajar_mysql;
+-- menunjukkan table yang ada pada database yang sebelumnya dipilih
+SHOW tables;
+-- menunjukkan Storage Engine
+SHOW Engines;
+-- membuat table
+CREATE TABLE tinggi_berat
+(
+kode INT,
+nama VARCHAR(100),
+tinggi INT,
+berat INT
+) ENGINE = InnoDB;
+-- menunjukkan list table
+SHOW TABLES;
+-- menujukkan info table
+DESCRIBE tinggi_berat;
+-- modify type data di kolom
+ALTER TABLE tinggi_berat
+MODIFY tinggi FLOAT;
+ALTER TABLE tinggi_berat
+MODIFY berat FLOAT;
+-- menunjukkan info table
+DESCRIBE tinggi_berat;
+-- mengisi data ke table
+INSERT INTO tinggi_berat (kode, nama, tinggi, berat) VALUES (1, 'Erin', 165.5, 65.1);
+-- menunjukkan data table
+SELECT * FROM tinggi_berat;
+-- menambahkan data pada table
+INSERT INTO tinggi_berat (kode, nama, tinggi, berat) 
+VALUES (2, 'Budi', 177.2, 69.2),
+(3, 'Kana', 155.0, 40.5);
+-- modify type data kolom (salah?)
+ALTER TABLE tinggi_berat
+MODIFY COLUMN (
+kode INT UNSIGNED NOT NULL,
+nama TEXT NOT NULL,
+tinggi FLOAT NOT NULL,
+berat FLOAT NOT NULL
+); 
+-- modify data kolom tapi satu-satu
+ALTER TABLE tinggi_berat
+MODIFY kode INT UNSIGNED NOT NULL;
+ALTER TABLE tinggi_berat
+MODIFY nama TEXT NOT NULL;
+ALTER TABLE tinggi_berat
+MODIFY tinggi FLOAT NOT NULL;
+ALTER TABLE tinggi_berat
+MODIFY berat FLOAT NOT NULL;
