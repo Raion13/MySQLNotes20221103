@@ -1,2 +1,12 @@
-# MySQLNotes
-Notes MySQL
+--- belajar_mysql
+-- table tinggi_berat
+- kode INT,
+- nama VARCHAR(100),
+- tinggi INT,
+- berat INT
+
+--- setelah modify
+- kode INT,
+- nama VARCHAR(100),
+- tinggi FLOAT,
+- berat FLOAT
